@@ -1,6 +1,6 @@
-./media/
+/media
 production.py
-./static/
+/static
 db.sqlite3
 *.egg-info
 *.pot
