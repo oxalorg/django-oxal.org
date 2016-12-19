@@ -16,10 +16,16 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.views import generic
+from . import settings
 
 urlpatterns = [
     url(r'^wiki/', include('doxwiki.urls')),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
-] 
-#+ static(settings.STATIC_URL, document_root=
+    url(r'^$', generic.TemplateView.as_view(template_name='oxalorg/index.html')),
+    url(r'^about/$', generic.TemplateView.as_view(template_name='oxalorg/about.html')),
+    url(r'^view2/', generic.TemplateView.as_view(template_name='oxalorg/view2.html')),
+    url(r'^$', generic.TemplateView.as_view(template_name='oxalorg/view1.html')),
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
