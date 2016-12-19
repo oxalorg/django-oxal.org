@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+      ▀▄▀█     ▄█        ▄▄▄▄▀     ▄███▄          ▄▄▄▄▄        ▄  █
+     █ █ █     ██     ▀▀▀ █        █▀   ▀        █     ▀▄     █   █
+     █ ▄ █     ██         █        ██▄▄        ▄  ▀▀▀▀▄       ██▀▀█
+     █   █     ▐█        █         █▄   ▄▀      ▀▄▄▄▄▀        █   █
+     █          ▐       ▀          ▀███▀                         █
+     ▀                                                          ▀
+
+           .-`
+            `-.
+            `-:--.         `....`
+           `-@MM::-      `-@MM@MM-.
+        .-@MM:---::.     -@MM@MM::-`
+     `-@MM::-`    `.`   .@MM@MM@MM:.
+   `.@MM@MM-`       ``  .@MM@MM@MM-.
+  .@MM@MM:-`         `.` .@MM@MM::-.
+  .@MM@MM::--.`        ..-@MM@MM::-.
+  -@MM@MM@MM@MM--...`..-@MM@MM@MM::-.`
+  `-@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM:-.....`
+    .-@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM::-`
+      `-@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM::`
+        `-@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM-`
+           `.--@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM.
+               `.--------------------------------`
+                 .@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM:.
+                 `-@MM@MM@MM@MM@MM@MM@MM-``-@MM::-`
+                  .@MM@MM@MM@MM@MM@MM@MM-  .@MM@MM-`
+                  -@MM@MM@MM@MM@MM@MM::-`  `-@MM::-.
+                  -@MM@MM@MM@MM@MM@MM@MM:.  .-@MM-`
+                  .-@MM@MM@MM@MM@MM@MM:-`--  `@MM.
+                ``-@MM@MM@MM@MM@MM@MM:-.  .---:--
+             `--@MM@MM@MM@MM@MM@MM@MM:-`   -@MM-`
+            .@MM@MM@MM@MM@MM@MM@MM@MM@MM-.  `-:.
+           `.@MM@MM@MM@MM@MM@MM@MM@MM@MM:--.  .-.
+          `@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM-` `.
+        `.@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM.
+       .-@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM::-.
+       -@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM::-`
+        .-@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM@MM:-`
+          `..-@MM@MM@MM-`.--@MM---@MM@MM@MM@MM@MM::-
+              ``..-@MM:-   .@MM. `.@MM@MM@MM@MM@MM:-
+                  .@MM-`   .-:-`  `...--@MM@MM@MM:-`
+                 `@MM::.   `---    ....---@MM@MM--.`
+              ``.-@MM::-   .---. `.----------------.
+         `...----------.`.-------------------------.
+        `-----------------------------------------`
+       `.................................`.......`
+
+
+      ███▄    █     ██▓    ███▄    █     ▄▄▄██▀▀▀    ▄▄▄
+      ██ ▀█   █    ▓██▒    ██ ▀█   █       ▒██      ▒████▄
+     ▓██  ▀█ ██▒   ▒██▒   ▓██  ▀█ ██▒      ░██      ▒██  ▀█▄
+     ▓██▒  ▐▌██▒   ░██░   ▓██▒  ▐▌██▒   ▓██▄██▓     ░██▄▄▄▄██
+     ▒██░   ▓██░   ░██░   ▒██░   ▓██░    ▓███▒       ▓█   ▓██▒
+     ░ ▒░   ▒ ▒    ░▓     ░ ▒░   ▒ ▒     ▒▓▒▒░       ▒▒   ▓▒█░
+     ░ ░░   ░ ▒░    ▒ ░   ░ ░░   ░ ▒░    ▒ ░▒░        ▒   ▒▒ ░
+        ░   ░ ░     ▒ ░      ░   ░ ░     ░ ░ ░        ░   ▒
+              ░     ░              ░     ░   ░            ░  ░
+
+-->
+<html>
+    <head>
+        <title>oxalorg</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'oxalorg/css/normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'oxalorg/css/skeleton.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'oxalorg/css/matrix.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body onclick="randomize_matrix();">
+        <canvas id="c" style="position:absolute;top:0;left:0;"></canvas>
+        <div class="container">
+            <div class="strokeme row" id="myName">
+                <div class="twelve columns">
+                    <h1>oxalorg</h1>
+                    <p>
+                        <a id="knowMore" href="/about">continue;</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row" id="terminal-parent">
+
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="{% static 'oxalorg/js/ajax.js' %}"></script>
+    <script type="text/javascript" src="{% static 'oxalorg/js/terminal.js' %}"></script>
+    <script type="text/javascript" src="{% static 'oxalorg/js/index.js' %}"></script>
+    <script type="text/javascript" src="{% static 'oxalorg/js/matrix.js' %}"></script>
+    {% include 'oxalorg/analytics.html' %}
+</html>

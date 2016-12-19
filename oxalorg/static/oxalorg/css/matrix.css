@@ -1,0 +1,48 @@
+/*adding a black bg to the body to make things clearer*/
+body {
+    background: black;
+}
+
+#c {
+    z-index: 0;
+}
+
+#myName{
+    /*margin: auto;*/
+    /*padding: auto;*/
+    /*position: absolute;*/
+    /*z-index: 1;*/
+    /*top: 5%;*/
+    /*left: 10%;*/
+    color: white;
+    /*font-size: 50px;*/
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
+#knowMore{
+    text-decoration: none;
+    color: white;
+    /*font-size: 0.6em;*/
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
+.strokeme
+{
+    color: white;
+    text-shadow:
+    -4px -4px 2px #000,
+     4px -4px 2px #000,
+     -4px 4px 2px #000,
+      4px 4px 2px #000;
+}
+
+#terminal {
+    background-color: black;
+    overflow-y: auto;
+    color: #eee;
+    border: 2px solid cyan;
+    position: relative;
+    z-index: 1;
+    min-height: 320px;
+    max-height: 480px;
+}
