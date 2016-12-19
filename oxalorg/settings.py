@@ -20,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = 'wow-ethan-great-moves-keep-it-up-proud-of-you'
 DEBUG = True
 
 # Application definition
@@ -121,3 +122,9 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Override production settings
+try:
+    from production import *
+except ImportError as e:
+    pass
